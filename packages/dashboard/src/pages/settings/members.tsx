@@ -77,7 +77,9 @@ export default function Index() {
 
 					return "Added new member";
 				},
-				error: "Could not add new member!",
+				error: (error) => {
+					return error.message
+				},
 			},
 		);
 	};
